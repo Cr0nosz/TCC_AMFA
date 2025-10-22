@@ -2,7 +2,7 @@
 name = "AMFA"
 version = "0.1.0"
 description = "Projeto executado por Marcelo Oliveira, Gustavo de Oliveira e Tulio Delazari"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<4.0"
 dependencies = [
     "bcrypt>=5.0.0",
     "flask>=3.1.2",
