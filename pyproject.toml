@@ -1,0 +1,17 @@
+[project]
+name = "AMFA"
+version = "0.1.0"
+description = "Projeto executado por Marcelo Oliveira, Gustavo de Oliveira e Tulio Delazari"
+requires-python = ">=3.11"
+dependencies = [
+    "bcrypt>=5.0.0",
+    "flask>=3.1.2",
+    "flask-cors>=6.0.1",
+    "flask-limiter>=4.0.0",
+    "flask-session>=0.8.0",
+    "flask-sqlalchemy>=3.1.1",
+    "psycopg2-binary>=2.9.10",
+    "python-dotenv>=1.1.1",
+    "pytz>=2025.2",
+    "requests>=2.32.5",
+]
