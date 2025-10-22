@@ -1,0 +1,205 @@
+/* Cybersecurity themed animations and effects */
+
+@keyframes binaryFall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes glitch {
+    0%, 100% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+}
+
+/* Binary rain canvas */
+#binary-rain-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* Circuit lines */
+.circuit-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.circuit-lines svg {
+    width: 100%;
+    height: 100%;
+}
+
+.circuit-path {
+    animation: pulse 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 3px var(--primary));
+}
+
+/* Glitch effect */
+.glitch {
+    animation: glitch 0.3s ease-in-out;
+}
+
+/* Scanline effect */
+.scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--primary), transparent);
+    animation: scanline 4s linear infinite;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Header shield animation */
+.shield-container {
+    padding: 1rem;
+    border-radius: 9999px;
+    background-color: rgba(23, 184, 144, 0.2);
+    border: 1px solid rgba(23, 184, 144, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.shield-icon {
+    width: 3rem;
+    height: 3rem;
+    color: var(--primary);
+}
+
+/* Typing cursor */
+.typing-cursor {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* Captcha container */
+.captcha-container {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.captcha-display {
+    flex: 1;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--primary);
+}
+
+/* Binary decoration */
+.binary-decoration {
+    font-family: var(--font-mono);
+    color: var(--primary);
+    opacity: 0.3;
+    font-size: 0.875rem;
+    letter-spacing: 0.125rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Security status indicators */
+.status-authenticated {
+    background-color: rgba(23, 184, 144, 0.2);
+    border: 1px solid rgba(23, 184, 144, 0.3);
+}
+
+.status-encrypted {
+    background-color: rgba(92, 173, 219, 0.2);
+    border: 1px solid rgba(92, 173, 219, 0.3);
+}
+
+.status-monitoring {
+    background-color: rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* Log action colors */
+.action-login {
+    color: var(--primary);
+}
+
+.action-register {
+    color: var(--chart-2);
+}
+
+.action-logout {
+    color: #facc15; /* yellow-400 */
+}
+
+.action-failed {
+    color: var(--destructive);
+}
+
+/* Page transition */
+.page {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background gradient overlay */
+.bg-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, var(--background), var(--background));
+}
